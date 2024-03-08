@@ -38,13 +38,16 @@ const stopWatch = () => {
 const startWatch = () => {
   stopWatch();
   stopBtn.classList.remove("disabled");
-  resetBtn.classList.remove("disabled");
+  startBtn.classList.add("disabled");
 };
 
 const stopWatchFn = () => {
   clearInterval(sectimeInterval);
   clearInterval(mintimeInterval);
   clearInterval(hourtimeInterval);
+  startBtn.classList.remove("disabled");
+  resetBtn.classList.remove("disabled");
+  stopBtn.classList.add("disabled");
 };
 
 const resetWatchFn = () => {
