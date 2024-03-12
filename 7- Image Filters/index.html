@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>7- Multi-Filter Image Editor | 50 JS Projects</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="sidebar">
+      <h2 class="heading">Select Image:</h2>
+      <div class="imagegalary">
+        <img
+          src="https://images.unsplash.com/photo-1622546758596-f1f06ba11f58?q=80&w=2121&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          alt=""
+          class="singleimg"
+          onclick="replaceLastImage(this)"
+        />
+        <img
+          src="https://images.unsplash.com/photo-1530549784468-814ad9b838b7?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          alt=""
+          class="singleimg"
+          onclick="replaceLastImage(this)"
+        />
+        <img
+          src="https://images.unsplash.com/photo-1579616074771-a1685333cbac?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          alt=""
+          class="singleimg"
+          onclick="replaceLastImage(this)"
+        />
+      </div>
+      <h2 class="heading">Select Filters:</h2>
+      <div class="filters">
+        <div class="filter">
+          <label for="contract">Contract:</label>
+          <input
+            type="range"
+            name="contract"
+            min="100"
+            max="300"
+            value="10"
+            data-sizing="%"
+          />
+        </div>
+        <div class="filter">
+          <label for="hue">Hue:</label>
+          <input
+            type="range"
+            name="hue"
+            min="10"
+            max="200"
+            value="10"
+            data-sizing="deg"
+          />
+        </div>
+
+        <div class="filter">
+          <label for="saturate">Saturation:</label>
+          <input
+            type="range"
+            name="saturate"
+            min="100"
+            max="600"
+            value="10"
+            data-sizing="%"
+          />
+        </div>
+        <div class="filter">
+          <label for="spacing">Spacing:</label>
+          <input
+            type="range"
+            name="spacing"
+            min="10"
+            max="200"
+            value="10"
+            data-sizing="px"
+          />
+        </div>
+
+        <div class="filter">
+          <label for="base">Border Color:</label>
+          <input type="color" name="base" value="#ffffff" />
+        </div>
+      </div>
+    </div>
+
+    <img
+      src="https://images.unsplash.com/photo-1622546758596-f1f06ba11f58?q=80&w=2121&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3DD"
+      alt=""
+      class="filterimg"
+    />
+
+    <script src="script.js"></script>
+  </body>
+</html>
