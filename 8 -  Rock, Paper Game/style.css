@@ -1,0 +1,135 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+  padding: 0;
+  line-height: calc(1em + 0.5rem);
+}
+html {
+  scroll-behavior: smooth;
+}
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+button {
+  border: none;
+  background: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #f1f1f1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.moves {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  gap: 1rem;
+}
+
+.moves > * {
+  width: 80px;
+  height: 80px;
+  position: relative;
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 10px 10px 23px 0px rgba(0, 0, 0, 0.52);
+  -webkit-box-shadow: 10px 10px 23px 0px rgba(0, 0, 0, 0.52);
+  -moz-box-shadow: 10px 10px 23px 0px rgba(0, 0, 0, 0.52);
+  cursor: pointer;
+}
+
+.rock {
+  background-color: blueviolet;
+}
+
+.paper {
+  background-color: chocolate;
+}
+
+.Scissor {
+  background-color: tomato;
+}
+
+.moveimg {
+  width: 60px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.scorecard {
+  margin-top: 3rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.scorecard > h4 {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.myscore {
+  color: coral;
+}
+
+.computerscore {
+  color: brown;
+}
+
+.gameresult {
+  margin-top: 4rem;
+  padding: 2rem 3rem;
+  border-radius: 10px;
+  background-color: #fbab7e;
+  background-image: linear-gradient(62deg, #fbab7e 0%, #f7ce68 100%);
+}
+
+.gameresult > p {
+  font-size: 1.2rem;
+  text-transform: capitalize;
+  color: #000;
+  text-align: center;
+}
+
+.gameresult > h2 {
+  font-size: 2rem;
+  text-transform: capitalize;
+  color: rgb(105, 104, 104);
+  text-align: center;
+  margin-top: 0.5rem;
+}

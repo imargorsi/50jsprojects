@@ -1,0 +1,176 @@
+@keyframes text-focus-in {
+  0% {
+    filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    filter: blur(0);
+    opacity: 1;
+  }
+}
+
+@keyframes roll-in-left {
+  0% {
+    transform: translateX(-800px) rotate(-540deg);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0) rotate(0deg);
+    opacity: 1;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+  padding: 0;
+  line-height: calc(1em + 0.5rem);
+}
+html {
+  scroll-behavior: smooth;
+}
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+button {
+  border: none;
+  background: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.features__tab {
+  display: flex;
+  gap: 1rem;
+}
+
+.tabs {
+  width: 310px;
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.3rem;
+  animation: roll-in-left 1s linear 0s 1 normal none;
+}
+
+.tabs__content {
+  width: 1000px;
+  padding: 2rem;
+}
+
+.single__tab {
+  padding: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  background-color: #d1d1d1;
+  color: #000;
+}
+
+.tabs__heading {
+  font-size: 1.3rem;
+  font-weight: 400;
+  color: inherit;
+}
+
+.single__tab:hover {
+  background-color: #e14853;
+  transition: all 0.3s linear;
+  color: whitesmoke;
+}
+
+.tabs__content__details {
+  font-weight: 400;
+  font-size: 1.1rem;
+  margin-top: 0.3rem;
+  color: #000;
+  animation: text-focus-in 2s ease;
+}
+
+.tabs__img {
+  margin-bottom: 1rem;
+  width: 150px;
+}
+
+.active__tab {
+  background-color: #e14853;
+  transform: scale(1.05);
+  transition: all 0.3s linear;
+  color: whitesmoke;
+}
+
+.visibility {
+  display: none;
+}
+
+@media (max-width: 1330px) {
+  .tabs__content {
+    width: 100%;
+  }
+
+  .features__tab {
+    gap: 2rem;
+  }
+  .tabs__heading {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 800px) {
+  .features__tab {
+    gap: 1rem;
+    flex-direction: column;
+    padding: 5rem;
+  }
+
+  .tabs__content {
+    width: 500px;
+    padding: 0rem;
+  }
+}
+
+@media (max-width: 660px) {
+  .features__tab {
+    padding: 2rem;
+  }
+
+  .tabs {
+    width: 100%;
+  }
+
+  .tabs__heading {
+    font-size: 1rem;
+  }
+
+  .tabs__content__details {
+    font-size: 1rem;
+  }
+
+  .tabs__content {
+    width: 100%;
+    padding: 0;
+  }
+}
